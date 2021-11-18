@@ -16,30 +16,30 @@ if __name__ == "__main__":
                     print("Unknown operator. Available operators: +, -, * and /")
                     exit(1)
 
-                    def add():
-                    toatl =add(num1, num2)
+                    def my_add():
+                    toatl = add(num1, num2)
                     print("{:d} + {:d}".format(num1, num2, total)))
                     return total
 
-                def sub():
-                    toatl =sub(num1, num2)
+                def my_sub():
+                    toatl = sub(num1, num2)
                     print("{:d} - {:d}".format(num1, num2, total)))
                     return total
 
-                def mul():
-                    toatl =mul(num1, num2)
+                def my_mul():
+                    toatl = mul(num1, num2)
                     print("{:d} * {:d}".format(num1, num2, total)))
                     return total
 
-                def div():
-                    toatl =mul(num1, num2)
+                def my_div():
+                    toatl = div(num1, num2)
                     print("{:d} / {:d}".format(num1, num2, total)))
                     return total
 
                 options = {
-                        "+": add,
-                        "-": sub,
-                        "*": mul,
-                        "/": div,
+                        "+": my_add,
+                        "-": my_sub,
+                        "*": my_mul,
+                        "/": my_div,
                         }
                 options.get(op, not_found)()
