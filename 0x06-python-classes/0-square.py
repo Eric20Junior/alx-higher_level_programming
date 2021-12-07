@@ -5,6 +5,6 @@ This is a Square model
 This model output a simple sqaure class.
 """
 
-class square():
+class Square():
     """A simple Square class"""
     pass
