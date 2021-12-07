@@ -2,9 +2,10 @@
 """
 This is a Square model
 
-This model output a simple sqaure class
+This model output a simple sqaure class.
 """
 
-class Square():
+
+class square:
     """A simple Square class"""
     pass
