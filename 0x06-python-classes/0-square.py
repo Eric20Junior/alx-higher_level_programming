@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-This is a Square model.
-
-This model output a simple sqaure class.
+This is the "Square"  module.
+This module provides a simple Square class.
 """
+
 
 class Square:
     """A simple Square class"""
