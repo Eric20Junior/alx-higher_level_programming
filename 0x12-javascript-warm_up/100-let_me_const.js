@@ -1,3 +1,3 @@
 #!/usr/bin/node
-// override in 100-main.js
+// override variable in 100-main.js to change content
 myVar = 333;
