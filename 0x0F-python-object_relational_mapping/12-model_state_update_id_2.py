@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-return state objects containing letter 'a' from database via python
+update state: given id, change state name
 parameters given to script: username, password, database
 """
 
@@ -18,12 +18,13 @@ if __name__ == "__main__":
     db = argv[3]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(user, passwd, db), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # query python instance in database for letter 'a'
-    for state in session.query(State).filter(
-            State.name.like('%a%')).order_by(State.id):
-        print("{:d}: {:s}".format(state.id, state.name))
+    # find and update state (run #7 to see table printed)
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
 
+    session.commit()
     session.close()
